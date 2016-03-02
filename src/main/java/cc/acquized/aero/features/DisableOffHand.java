@@ -3,6 +3,7 @@ package cc.acquized.aero.features;
 import cc.acquized.aero.Aero;
 import cc.acquized.aero.file.Config;
 import org.bukkit.Bukkit;
+import org.bukkit.Material;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
@@ -25,7 +26,8 @@ public class DisableOffHand implements Listener {
 
     @EventHandler
     public void onMove(PlayerMoveEvent e) {
-        if(e.getPlayer().getInventory().getItemInOffHand() != null) {
+        if((e.getPlayer().getInventory().getItemInOffHand() != null) && ((e.getPlayer().getInventory().getItemInOffHand().getType() != Material.SHIELD)
+          && (RightClickShield.currentlyHaveShield.contains(e.getPlayer())))) {
             e.getPlayer().getInventory().addItem(e.getPlayer().getInventory().getItemInOffHand().clone());
             e.getPlayer().getInventory().setItemInOffHand(null);
         }

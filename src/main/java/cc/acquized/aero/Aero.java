@@ -20,6 +20,8 @@ public class Aero extends JavaPlugin {
         EnderCrystals.registerListener();
         SpectralEffect.registerListener();
         HitCooldown.registerListener();
+        RightClickShield.registerListener();
+        Elytra.registerListener();
         Bukkit.getConsoleSender().sendMessage("[Aero] Aero v" + getDescription().getVersion() + " was enabled.");
     }
 

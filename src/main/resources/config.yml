@@ -9,7 +9,7 @@ Aero:
   # Color Codes are supported - Don't forgot the space at the end.
   Prefix: '&b[Aero] &7'
   # Don't change this unless you want to reset the config
-  Version: 1.0
+  Version: 1.1
 
 Features:
   # Should players be able to craft the enchanted golden apple?
@@ -26,4 +26,8 @@ Features:
     Crafting: true
     Placing: true
   # If a player blocks, should automaticly a shield appear in his off hand slot
-  #AddBlockingWithShield: true (currently not implemented)
+  AddBlockingWithShield: true
+  # Should Players be able to get the Elytra in the Inventory or flying with it?
+  Elytra:
+    InInventory: true
+    Flying: false

@@ -11,6 +11,10 @@ public class Aero extends JavaPlugin {
     public static String pr = "§b[Aero] §7";
     private static Aero instance;
 
+    public static Aero getInstance() {
+        return instance;
+    }
+
     @Override
     public void onEnable() {
         instance = this;
@@ -22,6 +26,9 @@ public class Aero extends JavaPlugin {
         HitCooldown.registerListener();
         RightClickShield.registerListener();
         Elytra.registerListener();
+        BrewingRod.registerListener();
+        ShovelPath.registerListener();
+        Colliding.registerListener();
         Bukkit.getConsoleSender().sendMessage("[Aero] Aero v" + getDescription().getVersion() + " was enabled.");
     }
 
@@ -29,10 +36,6 @@ public class Aero extends JavaPlugin {
     public void onDisable() {
         instance = null;
         Bukkit.getConsoleSender().sendMessage("[Aero] Aero v" + getDescription().getVersion() + " was disabled.");
-    }
-
-    public static Aero getInstance() {
-        return instance;
     }
 
 }

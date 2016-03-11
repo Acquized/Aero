@@ -26,11 +26,22 @@ public class RightClickShield implements Listener {
         }
     }
 
+    private static void setShieldInOffHand(Player p) {
+        ItemStack shield = new ItemStack(Material.SHIELD);
+        shield.getItemMeta().spigot().setUnbreakable(true);
+        shield.getItemMeta().addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+        p.getInventory().setItemInOffHand(shield);
+    }
+
+    private static void clearOffHand(Player p) {
+        p.getInventory().setItemInOffHand(null);
+    }
+
     @EventHandler
     public void onInteract(PlayerInteractEvent e) {
         Player p = e.getPlayer();
         if((e.getAction() == Action.RIGHT_CLICK_BLOCK) || (e.getAction() == Action.RIGHT_CLICK_AIR)) {
-            Material m = e.getItem().getType();
+            Material m = e.getItem() == null ? Material.AIR : e.getItem().getType();
             if((m == Material.DIAMOND_SWORD) || (m == Material.GOLD_SWORD) || (m == Material.IRON_SWORD) || (m == Material.STONE_SWORD) || (m == Material.WOOD_SWORD)) {
                 if(!currentlyHaveShield.contains(p)) {
                     currentlyHaveShield.add(p);
@@ -47,17 +58,6 @@ public class RightClickShield implements Listener {
             clearOffHand(p);
             currentlyHaveShield.remove(p);
         }
-    }
-
-    private static void setShieldInOffHand(Player p) {
-        ItemStack shield = new ItemStack(Material.SHIELD);
-        shield.getItemMeta().spigot().setUnbreakable(true);
-        shield.getItemMeta().addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
-        p.getInventory().setItemInOffHand(shield);
-    }
-
-    private static void clearOffHand(Player p) {
-        p.getInventory().setItemInOffHand(null);
     }
 
 }

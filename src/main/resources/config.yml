@@ -9,7 +9,7 @@ Aero:
   # Color Codes are supported - Don't forgot the space at the end.
   Prefix: '&b[Aero] &7'
   # Don't change this unless you want to reset the config
-  Version: 1.1
+  Version: 1.2
 
 Features:
   # Should players be able to craft the enchanted golden apple?
@@ -31,3 +31,9 @@ Features:
   Elytra:
     InInventory: true
     Flying: false
+  # Should automaticly on open a Blaze Rod placed in the Brewing Stand? Players will not able to get these
+  BrewingStandPowder: true
+  # Disallow creating Grass Path Blocks when right clicking with a shovel?
+  DisallowRightClickPath: false
+  # Can User collide each other?
+  UserColliding: false

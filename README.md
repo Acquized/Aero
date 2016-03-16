@@ -1,4 +1,4 @@
 # Aero
-Undo 1.9 Changes | Made for Spigot 1.9
-
-[![Nö](http://i.imgur.com/3WJbJYc.gif)](http://i.imgur.com/3WJbJYc.gif)
+![Travis CI Build](https://travis-ci.org/Acquized/Aero.svg?branch=master)  
+Get the 1.8 feeling on your 1.9 Spigot Server!  
+Watch the Gif [here](http://i.imgur.com/3WJbJYc.gif).

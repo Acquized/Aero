@@ -1,0 +1,39 @@
+#     _
+#    / \   ___ _ __ ___
+#   / _ \ / _ \ '__/ _ \
+#  / ___ \  __/ | | (_) |
+#  /_/   \_\___|_|  \___/
+
+Aero:
+  # Set here the Prefix that should be used for all Messages
+  # Color Codes are supported - Don't forgot the space at the end.
+  Prefix: '&b[Aero] &7'
+  # Don't change this unless you want to reset the config
+  Version: 1.2
+
+Features:
+  # Should players be able to craft the enchanted golden apple?
+  CraftableOpGapple: true
+  # Should the 1.9 Hit Cooldown be removed from all Weapons?
+  RemoveHitCooldown: true
+  # Should the 2. hand slot be disabled?
+  # Players will not be able to put items in this slot
+  DisableOffHandSlot: true
+  # Automaticly remove the Spectral Arrow Effect from all mobs
+  RemoveSpectralEffect: true
+  # Should crafting and placing from Ender Crystals be blocked?
+  BlockEnderCrystals:
+    Crafting: true
+    Placing: true
+  # If a player blocks, should automaticly a shield appear in his off hand slot
+  AddBlockingWithShield: true
+  # Should Players be able to get the Elytra in the Inventory or flying with it?
+  Elytra:
+    InInventory: true
+    Flying: false
+  # Should automaticly on open a Blaze Rod placed in the Brewing Stand? Players will not able to get these
+  BrewingStandPowder: true
+  # Disallow creating Grass Path Blocks when right clicking with a shovel?
+  DisallowRightClickPath: false
+  # Can User collide each other?
+  UserColliding: false

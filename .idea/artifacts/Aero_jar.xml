@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Aero:jar">
+    <output-path>$USER_HOME$/Schreibtisch</output-path>
+    <root id="archive" name="Aero.jar">
+      <element id="module-output" name="Aero" />
+    </root>
+  </artifact>
+</component>

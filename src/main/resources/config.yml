@@ -9,7 +9,7 @@ Aero:
   # Color Codes are supported - Don't forgot the space at the end.
   Prefix: '&b[Aero] &7'
   # Don't change this unless you want to reset the config
-  Version: 1.2
+  Version: 1.3
 
 Features:
   # Should players be able to craft the enchanted golden apple?

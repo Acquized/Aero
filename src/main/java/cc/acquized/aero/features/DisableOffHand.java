@@ -30,8 +30,8 @@ public class DisableOffHand implements Listener {
         Player p = e.getPlayer();
         if((p.getInventory().getItemInOffHand() != null) && (p.getInventory().getItemInOffHand().getType() != Material.AIR)) {
             if(!((Config.getConfig().getBoolean("Features.AddBlockingWithShield")) && (RightClickShield.currentlyHaveShield.contains(p)) && (p.getInventory().getItemInOffHand().getType() == Material.SHIELD))) {
-                p.getInventory().addItem(p.getInventory().getItemInOffHand().clone());
-                p.getInventory().remove(p.getInventory().getItemInOffHand());
+                p.getWorld().dropItem(p.getLocation(), p.getInventory().getItemInOffHand());
+                p.getInventory().setItemInOffHand(null);
             }
         }
         /*if((e.getPlayer().getInventory().getItemInOffHand() != null) && ((e.getPlayer().getInventory().getItemInOffHand().getType() != Material.SHIELD)

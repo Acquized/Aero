@@ -38,7 +38,7 @@
     </licenses>
 
     <build>
-        <finalName>Nametags</finalName>
+        <finalName>Aero</finalName>
         <sourceDirectory>${basedir}/src/main/java</sourceDirectory>
         <resources>
             <resource>

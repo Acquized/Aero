@@ -18,30 +18,22 @@ public class BrewingRod implements Listener {
         }
     }
 
-    @EventHandler
-    public void onOpen(InventoryOpenEvent e) {
-        if(e.getInventory().getType() == InventoryType.BREWING) {
-            ((BrewerInventory)e.getInventory()).setFuel(new ItemStack(Material.BLAZE_POWDER, 64));
-        }
-    }
+	@EventHandler
+	public void onOpen(InventoryOpenEvent e) {
+		if (e.getInventory().getType() == InventoryType.BREWING) {
+			((BrewerInventory) e.getInventory()).getHolder().setFuelLevel(20);
+		}
+	}
 
-    @EventHandler
-    public void onBrew(BrewEvent e) {
-        e.getContents().setFuel(new ItemStack(Material.BLAZE_POWDER, 64));
-    }
+	@EventHandler
+	public void onBrew(BrewEvent e) {
+		e.getContents().getHolder().setFuelLevel(20);
+	}
 
-    @EventHandler
-    public void onClick(InventoryClickEvent e) {
-        if(e.getCurrentItem().getType() == Material.BLAZE_POWDER) {
-            e.setCancelled(true);
-        }
-    }
-
-    @EventHandler
-    public void onClose(InventoryCloseEvent e) {
-        if((e.getInventory().getType() == InventoryType.BREWING) && (e.getInventory().contains(Material.BLAZE_POWDER))) {
-            e.getInventory().remove(Material.BLAZE_POWDER);
-        }
-    }
-
+	@EventHandler
+	public void onClose(InventoryCloseEvent e) {
+		if (e.getInventory().getType() == InventoryType.BREWING) {
+			((BrewerInventory) e.getInventory()).getHolder().setFuelLevel(20);
+		}
+	}
 }
